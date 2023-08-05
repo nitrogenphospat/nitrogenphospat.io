@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Caesar Encrypt</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h2 style="text-align: center;margin-bottom: 16px;">Caesar Shift Encryption</h2>
+            <div class="input">
+                <span>Plain Text</span>
+                <input type="text" name="" id="plain" oninput="cryp()">
+            </div>
+            <div class="input">
+                <span>Pergeseran A>B</span>
+                <input type="number" name="" id="geser" oninput="cryp()">
+            </div>
+            <div class="input">
+                <span>Output</span>
+                <input type="text" name="" id="output">
+            </div>
+            <button onclick="cryp()">Enkripsi</button>
+            <script>
+                
+                // ENKRIPSI CAESAR SHIFT KANAN
+                function cryp(){
+                    let hasil = ''
+                    let p = document.getElementById('plain').value.toUpperCase()
+                    let k = document.getElementById('geser').value
+                    if(k == isFinite()){
+                        if(k != '0'){
+                            document.getElementById('output').value = "TIDAK BISA/TIDAK VALID"
+                            return false
+                        }
+                        
+                    }
+                    let K = Math.abs(Number(k))
+
+                    let tmp1 = ''
+                    let tmp2 = ''
+
+                    let txt = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0'];
+                    for(let i = 0; i<p.length;i++){
+                        tmp1 = p[i];
+                        if(tmp1 == ' '){
+                            hasil += ' '
+                        }
+                        for(j=0; j<txt.length;j++){
+                           tmp2 = txt[j]
+                           if(tmp1 == tmp2){
+                            if(txt[j+K] == undefined && K > 35){
+                                // if(K == K+1)
+                                hasil+= txt[Math.abs((j+K)%36)];
+                                // console.log('kena1')
+                            }else if(txt[j+K] == undefined && K <= 36){
+                                    hasil+= txt[j-36+K];
+                                    // console.log('kena2')
+                            }else{
+                            hasil += txt[j+K]
+                            }
+                           }
+                        }
+                    }
+                    document.getElementById('output').value = hasil
+                    // console.log(hasil)
+                }
+            </script>
+        </section>
+    </div>
+    <footer><a href="https://github.com/nitrogenphospat" target="_blank">Nitrogenphospat</a></footer>
+</body>
+</html>
