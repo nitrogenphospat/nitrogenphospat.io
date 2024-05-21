@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar|Quicksand:300,400,700');
+ *, *::before, *::after {
+	 box-sizing: border-box;
+}
+ body {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 min-height: 100vh;
+	 padding: 3rem;
+	 font-family: 'Quicksand', sans-serif;
+	 font-size: 16px;
+	 color: #777;
+	 background: #2d1b55;
+}
+ h1, h2, h3, h4, h5, h6 {
+	 margin-top: 0;
+	 font-weight: normal;
+}
+/*** <--- DEMO STYLES ---> ***/
+ .wrapper {
+	 position: relative;
+}
+ #scene {
+	 position: relative;
+	 overflow: hidden;
+	 width: 500px;
+	 max-width: 100%;
+	 min-height: 500px;
+	 border-radius: 50%;
+	 background: #41277c;
+}
+ #scene::after {
+	 content: '';
+	 position: absolute;
+	 height: 100%;
+	 width: 50%;
+	 top: 0;
+	 left: 0;
+	 background: rgba(255, 255, 255, .025);
+}
+ .text {
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 left: 0;
+	 width: 100%;
+	 text-align: center;
+}
+ .text h1 {
+	 font-size: 3.5em;
+	 font-weight: 700;
+	 line-height: 40px;
+	 color: #eef;
+	 text-shadow: 0 0 1px #41277c, 0 0 15px rgba(238, 238, 255, .85);
+}
+ .text h2 {
+	 font-weight: 700;
+	 font-size: 2.5em;
+	 color: #9fb798;
+}
+ .salju {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+}
+ .salju .flake {
+	 opacity: 0;
+	 position: absolute;
+	 top: -0.25rem;
+	 width: 0.25rem;
+	 height: 0.25rem;
+	 background-color: rgba(255, 255, 255, 0.5);
+	 border-radius: 50%;
+}
+ .salju .flake:nth-child(1) {
+	 left: 5%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 2538ms;
+}
+ .salju .flake:nth-child(2) {
+	 left: 73%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 634ms;
+}
+ .salju .flake:nth-child(3) {
+	 left: 22%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 941ms;
+}
+ .salju .flake:nth-child(4) {
+	 left: 73%;
+	 animation: blow 19086ms ease-in infinite;
+	 animation-delay: 235ms;
+}
+ .salju .flake:nth-child(5) {
+	 left: 43%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 8222ms;
+}
+ .salju .flake:nth-child(6) {
+	 left: 25%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4987ms;
+}
+ .salju .flake:nth-child(7) {
+	 left: 49%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 7594ms;
+}
+ .salju .flake:nth-child(8) {
+	 left: 38%;
+	 animation: blow 17672ms ease-in infinite;
+	 animation-delay: 4056ms;
+}
+ .salju .flake:nth-child(9) {
+	 left: 30%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 1449ms;
+}
+ .salju .flake:nth-child(10) {
+	 left: 55%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 6795ms;
+}
+ .salju .flake:nth-child(11) {
+	 left: 69%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 559ms;
+}
+ .salju .flake:nth-child(12) {
+	 left: 55%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4963ms;
+}
+ .salju .flake:nth-child(13) {
+	 left: 66%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 9501ms;
+}
+ .salju .flake:nth-child(14) {
+	 left: 75%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 5769ms;
+}
+ .salju .flake:nth-child(15) {
+	 left: 38%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 11505ms;
+}
+ .salju .flake:nth-child(16) {
+	 left: 11%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 1262ms;
+}
+ .salju .flake:nth-child(17) {
+	 left: 29%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4994ms;
+}
+ .salju .flake:nth-child(18) {
+	 left: 59%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4426ms;
+}
+ .salju .flake:nth-child(19) {
+	 left: 14%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3728ms;
+}
+ .salju .flake:nth-child(20) {
+	 left: 65%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 11935ms;
+}
+ .salju .flake:nth-child(21) {
+	 left: 67%;
+	 animation: blow 15623ms ease-in infinite;
+	 animation-delay: 3721ms;
+}
+ .salju .flake:nth-child(22) {
+	 left: 92%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 5084ms;
+}
+ .salju .flake:nth-child(23) {
+	 left: 58%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3141ms;
+}
+ .salju .flake:nth-child(24) {
+	 left: 7%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 7703ms;
+}
+ .salju .flake:nth-child(25) {
+	 left: 41%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 200ms;
+}
+ .salju .flake:nth-child(26) {
+	 left: 90%;
+	 animation: blow 15853ms ease-in infinite;
+	 animation-delay: 9196ms;
+}
+ .salju .flake:nth-child(27) {
+	 left: 4%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4286ms;
+}
+ .salju .flake:nth-child(28) {
+	 left: 18%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3359ms;
+}
+ .salju .flake:nth-child(29) {
+	 left: 99%;
+	 animation: blow 16996ms ease-in infinite;
+	 animation-delay: 6212ms;
+}
+ .salju .flake:nth-child(30) {
+	 left: 19%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 6303ms;
+}
+ .salju .flake:nth-child(31) {
+	 left: 64%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3039ms;
+}
+ .salju .flake:nth-child(32) {
+	 left: 57%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 169ms;
+}
+ .salju .flake:nth-child(33) {
+	 left: 76%;
+	 animation: blow 15433ms ease-in infinite;
+	 animation-delay: 11705ms;
+}
+ .salju .flake:nth-child(34) {
+	 left: 40%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3897ms;
+}
+ .salju .flake:nth-child(35) {
+	 left: 52%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 7071ms;
+}
+ .salju .flake:nth-child(36) {
+	 left: 95%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4699ms;
+}
+ .salju .flake:nth-child(37) {
+	 left: 10%;
+	 animation: blow 15104ms ease-in infinite;
+	 animation-delay: 7537ms;
+}
+ .salju .flake:nth-child(38) {
+	 left: 35%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 2264ms;
+}
+ .salju .flake:nth-child(39) {
+	 left: 23%;
+	 animation: blow 15443ms ease-in infinite;
+	 animation-delay: 2525ms;
+}
+ .salju .flake:nth-child(40) {
+	 left: 64%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 169ms;
+}
+ .salju .flake:nth-child(41) {
+	 left: 84%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 3896ms;
+}
+ .salju .flake:nth-child(42) {
+	 left: 63%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 1813ms;
+}
+ .salju .flake:nth-child(43) {
+	 left: 12%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 878ms;
+}
+ .salju .flake:nth-child(44) {
+	 left: 36%;
+	 animation: blow 17015ms ease-in infinite;
+	 animation-delay: 5131ms;
+}
+ .salju .flake:nth-child(45) {
+	 left: 68%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 7600ms;
+}
+ .salju .flake:nth-child(46) {
+	 left: 95%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 9930ms;
+}
+ .salju .flake:nth-child(47) {
+	 left: 44%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 838ms;
+}
+ .salju .flake:nth-child(48) {
+	 left: 100%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 9270ms;
+}
+ .salju .flake:nth-child(49) {
+	 left: 98%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 4978ms;
+}
+ .salju .flake:nth-child(50) {
+	 left: 66%;
+	 animation: blow 15000ms ease-in infinite;
+	 animation-delay: 1066ms;
+}
+ .pohon {
+	 position: relative;
+	 position: absolute;
+}
+ .pohon::before, .pohon::after {
+	 content: '';
+	 position: absolute;
+}
+ .pohon.one {
+	 bottom: 30%;
+	 left: 47%;
+	 opacity: 0.7;
+}
+ .pohon.two {
+	 transform: scale(0.8);
+	 bottom: 28%;
+	 left: 80%;
+	 opacity: 0.4;
+}
+ .pohon.three {
+	 transform: scale(0.6);
+	 bottom: 26%;
+	 left: 70%;
+	 opacity: 0.2;
+}
+ .pohon.four {
+	 transform: scale(0.8);
+	 bottom: 28%;
+	 left: 20%;
+	 opacity: 0.5;
+}
+ .pohon.five {
+	 transform: scale(0.6);
+	 bottom: 26%;
+	 left: 38%;
+	 opacity: 0.2;
+}
+ .pohon::before {
+	 border: 20px solid transparent;
+	 border-bottom: 30px solid #eef;
+}
+ .pohon::after {
+	 top: -10px;
+	 border: 20px solid transparent;
+	 border-bottom: 30px solid #eef;
+}
+ .platform {
+	 position: absolute;
+	 bottom: 0;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 width: 400px;
+	 height: 100px;
+	 padding-top: 50px;
+	 background: #2d1b55;
+	 border-radius: 0 0 5px 5px;
+}
+ .platform::before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 30px;
+	 background: #9fb4c7;
+	 border-radius: 0 0 5px 5px;
+}
+ .platform .quote {
+	 padding: 0 1rem;
+	 font-family: 'Codystar', cursive;
+	 font-size: 1.8em;
+     font-weight: 600;
+	 text-align: center;
+	 line-height: 1.4;
+	 color: #c9c9c9;
+}
+ @keyframes blow {
+	 0% {
+		 opacity: 0;
+		 transform: translate(0, 0);
+	}
+	 20% {
+		 opacity: 0.5;
+	}
+	 100% {
+		 opacity: 0.5;
+		 transform: translate(0, 500px);
+	}
+}
+ @media all and (max-width: 520px) {
+	 .wrapper {
+		 transform: scale(0.6);
+	}
+}
+ 
