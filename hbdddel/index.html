@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h1 style="margin-bottom:15px;">Selamat Ulang Tahun!</h1>
+                <button onclick="openCard()">Buka Kartu</button>
+            </div>
+            <div class="card-back">
+                <h2>Selamat Ulang Tahun Delya!</h2>
+                <p>Semoga harimu dipenuhi dengan kebahagiaan dan kejutan menyenangkan! Semoga semua impianmu menjadi kenyataan.</p>
+                <button onclick="tutup()">Tutup Kartu</button>
+            </div>
+        </div>
+    </div>
+    <script>
+      function openCard() {
+    document.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
+}
+
+function tutup() {
+    document.querySelector('.card-inner').style.transform = 'rotateY(0deg)';
+    document.querySelector('button').style.marginTop = 'rotateY(0deg)';
+}
+
+    </script>
+</body>
+</html>
