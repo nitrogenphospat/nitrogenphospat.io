@@ -49,10 +49,10 @@ function CountDownTimer(dt, id)
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById(id).innerHTML = days.toString().padStart(2,'0') + ' : ';
-        document.getElementById(id).innerHTML += hours.toString().padStart(2,'0') + ' : ';
-        document.getElementById(id).innerHTML += minutes.toString().padStart(2,'0') + ' : ';
-        document.getElementById(id).innerHTML += seconds.toString().padStart(2,'0') + ' ';
+        document.getElementById(id).innerHTML = Math.abs(days).toString().padStart(2,'0') + ' : ';
+        document.getElementById(id).innerHTML += Math.abs(hours).toString().padStart(2,'0') + ' : ';
+        document.getElementById(id).innerHTML += Math.abs(minutes).toString().padStart(2,'0') + ' : ';
+        document.getElementById(id).innerHTML += Math.abs(seconds).toString().padStart(2,'0') + ' ';
     }
 
     timer = setInterval(showRemaining, 1);
