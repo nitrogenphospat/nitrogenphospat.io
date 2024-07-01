@@ -37,13 +37,13 @@ function CountDownTimer(dt, id)
     function showRemaining() {
         var now = new Date();
         var distance = end - now;
-        if (distance < 0) {
+        // if (distance < 0) {
 
-            clearInterval(timer);
-            document.getElementById(id).innerHTML = 'EXPIRED!';
+        //     clearInterval(timer);
+        //     document.getElementById(id).innerHTML = 'EXPIRED!';
 
-            return;
-        }
+        //     return;
+        // }
         var days = Math.floor(distance / _day);
         var hours = Math.floor((distance % _day) / _hour);
         var minutes = Math.floor((distance % _hour) / _minute);
